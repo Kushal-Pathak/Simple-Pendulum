@@ -64,8 +64,8 @@ public:
 int main() {
 	sf::RenderWindow window(sf::VideoMode(width, height), "My Window");
 	Pendulum pendulum;
-	Pendulum p1(sf::Vector2f(width / 3, 20), 500, 60);
-	Pendulum p2(sf::Vector2f(width * 5 / 6, 20), 500, -60);
+	//Pendulum p1(sf::Vector2f(width / 3, 20), 500, 60);
+	//Pendulum p2(sf::Vector2f(width * 5 / 6, 20), 500, -60);
 	while (window.isOpen()) {
 		sf::Event event;
 		while (window.pollEvent(event)) {
@@ -80,19 +80,19 @@ int main() {
 		window.draw(pendulum.anchor);
 		window.draw(pendulum.bob);
 
-		window.draw(p1.line, 2, sf::Lines);
-		window.draw(p1.anchor);
-		window.draw(p1.bob);
+		//window.draw(p1.line, 2, sf::Lines);
+		//window.draw(p1.anchor);
+		//window.draw(p1.bob);
 
-		window.draw(p2.line, 2, sf::Lines);
-		window.draw(p2.anchor);
-		window.draw(p2.bob);
+		//window.draw(p2.line, 2, sf::Lines);
+		//window.draw(p2.anchor);
+		//window.draw(p2.bob);
 		
 		window.display();
 		pendulum.update();
 
-		p1.update();
+		//p1.update();
 
-		p2.update();
+		//p2.update();
 	}
 }
